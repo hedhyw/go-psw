@@ -7,7 +7,7 @@
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/hedhyw/go-psw)](https://pkg.go.dev/github.com/hedhyw/go-psw?tab=doc)
 
 
-**A tiny golang tool for generating a crypto-random password using the terminal.**
+**A tiny golang tool for generating a crypto-random password in a terminal.**
 
 <img alt="Golang logo" src="https://raw.githubusercontent.com/rfyiamcool/golang_logo/master/png/golang_68.png" height="200" />
 
