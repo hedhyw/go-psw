@@ -1,5 +1,6 @@
 package consts
 
+// Prdefined charsets.
 const (
 	LowerLetters = "abcdefghijklmnopqrstuvwxyz"
 	UpperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"

@@ -14,6 +14,7 @@ const (
 	defaultSize = 18
 )
 
+// Run is an application entry-point.
 func Run(args []string, out io.Writer) (err error) {
 	chars := consts.LowerLetters + consts.UpperLetters + consts.Digits
 	size := defaultSize

@@ -9,20 +9,24 @@ import (
 	"strings"
 )
 
+// Generator of random passwords.
 type Generator struct {
 	io.Reader
 }
 
+// NewGeneratorFromReader creates a new generator with a given source.
 func NewGeneratorFromReader(r io.Reader) *Generator {
 	return &Generator{
 		Reader: r,
 	}
 }
 
+// NewCryptoRandGenerator creates a new generator with a crypto/rand source.
 func NewCryptoRandGenerator() *Generator {
 	return NewGeneratorFromReader(rand.Reader)
 }
 
+// GeneratePassword generates a password of a given size using given chars.
 func (g Generator) GeneratePassword(chars string, size int) (string, error) {
 	switch {
 	case size <= 0:
@@ -54,6 +58,7 @@ func (g Generator) GeneratePassword(chars string, size int) (string, error) {
 	return sb.String(), nil
 }
 
+// RandInt64 generates a random int64 number.
 func (g Generator) RandInt64() (v uint64, err error) {
 	err = binary.Read(g.Reader, binary.LittleEndian, &v)
 
