@@ -12,8 +12,9 @@
 <img alt="Golang logo" src="https://raw.githubusercontent.com/rfyiamcool/golang_logo/master/png/golang_68.png" height="200" />
 
 ## Installation
+
 ```sh
-go install github/hedhyw/go-psw/cmd/psw@latest
+go install github.com/hedhyw/go-psw/cmd/psw@latest
 ```
 
 ## Usage
@@ -51,9 +52,9 @@ func main() {
 	g := generator.NewCryptoRandGenerator()
 
 	chars, err := g.GeneratePassword(
-        consts.Digits+consts.LowerLetters, // Chars to use.
-        10, // Password length.
-    )
+		consts.Digits+consts.LowerLetters, // Chars to use.
+		10,                                // Password length.
+	)
 	if err != nil {
 		log.Fatal(err)
 	}
